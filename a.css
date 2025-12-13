@@ -68,8 +68,9 @@ transform: scale(0.95);
 
 /* الروابط */
 .social-bar{
-   
+   width:100%;
     display: flex;
+  padding:10px 0;
   justify-content: center;
   align-items: center;
   padding: 8PX 10PX;
@@ -82,10 +83,10 @@ transform: scale(0.95);
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 8px; /* مسافة بين الروابط */
+    gap: 15px; /* مسافة بين الروابط */
    font-size:14px ;
    font-weight: bold;
-  max-width:100%;
+ align-itmes: center;
     padding: 0;
 }
 
@@ -93,7 +94,7 @@ transform: scale(0.95);
     font-family: M;
     color: rgb(221, 157, 199);
     text-decoration: none;
-    font-size: 13px;
+    font-size:24px;
   white-space:nowrap;
 }
 
@@ -418,12 +419,7 @@ footer {
             /* --- الهواتف الصغيرة: أقل من 600px --- */
                       /* --- الهواتف الصغيرة: أقل من 600px --- */
 @media (min-width:360px) and (max-width: 480px)  {
-.social-bar .csc ul {
-  justify-content:center;
-  overflow-x: auto;
-    max-width:80%;
 
-}
       .video-overlay h4{
  padding: 5px 10px;
  font-size: 15px;
@@ -484,14 +480,9 @@ footer {
 
 @media (min-width: 480px) and (max-width: 600px)  {
   
-.social-bar .csc ul {
-  justify-content:center;
-  overflow-x: auto;
-    max-width:80%;
 
-}
       .video-overlay h4{
- padding: 5px 10px;
+ padding: 10px 15px;
  font-size: 15px;
        }
 
@@ -546,9 +537,7 @@ footer {
 
 /* --- الهواتف الكبيرة والتابلت الصغير: 600px – 900px --- */
 @media (min-width: 601px) and (max-width: 900px) {
-      .social-bar{
-        width:80%;
-    }
+   
  
     header .logo h1 {
         font-size: 55px;
@@ -664,5 +653,6 @@ footer {
     }
 
 }
+
 
 
