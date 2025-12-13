@@ -68,7 +68,7 @@ transform: scale(0.95);
 
 /* الروابط */
 .social-bar{
-   width:80%;
+   width:95%;
     display: flex;
   justify-content: center;
   align-items: center;
@@ -418,9 +418,7 @@ footer {
             /* --- الهواتف الصغيرة: أقل من 600px --- */
                       /* --- الهواتف الصغيرة: أقل من 600px --- */
 @media (min-width:360px) and (max-width: 480px)  {
-.social-bar{
-  width:60%
-}
+
   .social-bar .csc ul {
     gap:15px;
  
@@ -486,9 +484,7 @@ footer {
 }
 
 @media (min-width: 480px) and (max-width: 600px)  {
-.social-bar{
-  width:60%
-}
+
   .social-bar .csc ul {
     gap:15px;
  
@@ -669,6 +665,7 @@ footer {
     }
 
 }
+
 
 
 
