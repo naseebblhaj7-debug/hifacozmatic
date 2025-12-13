@@ -68,11 +68,11 @@ transform: scale(0.95);
 
 /* الروابط */
 .social-bar{
-    width: 70%;
+   
     display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5PX 10PX;
+  padding: 8PX 10PX;
   position: relative;
   z-index: 99;
 }
@@ -82,8 +82,8 @@ transform: scale(0.95);
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 15px; /* مسافة بين الروابط */
-   font-size:15% ;
+    gap: 10px; /* مسافة بين الروابط */
+   font-size:14px ;
    font-weight: bold;
     padding: 0;
 }
@@ -92,7 +92,8 @@ transform: scale(0.95);
     font-family: M;
     color: rgb(221, 157, 199);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 14px;
+  white-space:nowrap;
 }
 
 .social-bar .csc ul li a:hover {
@@ -417,8 +418,8 @@ footer {
                       /* --- الهواتف الصغيرة: أقل من 600px --- */
 @media (min-width:360px) and (max-width: 480px)  {
 .social-bar .csc ul {
-    font-size: 8%;
-    gap: 10px;
+  justify-content:center;
+  overflow-x: auto;
 
 }
       .video-overlay h4{
@@ -480,12 +481,10 @@ footer {
 }
 
 @media (min-width: 480px) and (max-width: 600px)  {
-    .social-bar{
-        width:60%;
-    }
+  
 .social-bar .csc ul {
-    font-size: 6%;
-    gap: 10px;
+  justify-content:center;
+  overflow-x: auto;
 
 }
       .video-overlay h4{
@@ -662,3 +661,4 @@ footer {
     }
 
 }
+
