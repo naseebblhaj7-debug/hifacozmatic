@@ -84,8 +84,7 @@ transform: scale(0.95);
     display: flex;
     justify-content: center;
     gap: 15px; /* مسافة بين الروابط */
-  
-   font-weight: bold;
+
  align-itmes: center;
     padding: 0;
 }
@@ -94,7 +93,8 @@ transform: scale(0.95);
     font-family: M;
     color: rgb(221, 157, 199);
     text-decoration: none;
-    font-size:24px;
+    font-size:16px;
+  font-width:blod;
   white-space:nowrap;
 }
 
@@ -423,8 +423,8 @@ footer {
   width:60%
 }
   .social-bar .csc ul {
-    gap:7px;
-    font-size:12px;
+    gap:15px;
+ 
   }
   .social-bar .csc ul a{
     font-size:12px;
@@ -487,12 +487,12 @@ footer {
 }
 
 @media (min-width: 480px) and (max-width: 600px)  {
-  .social-bar{
+.social-bar{
   width:60%
 }
   .social-bar .csc ul {
-    gap:7px;
-      font-size:12px;
+    gap:15px;
+ 
   }
   .social-bar .csc ul a{
     font-size:12px;
@@ -670,6 +670,7 @@ footer {
     }
 
 }
+
 
 
 
