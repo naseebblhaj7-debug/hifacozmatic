@@ -82,9 +82,10 @@ transform: scale(0.95);
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 10px; /* مسافة بين الروابط */
+    gap: 8px; /* مسافة بين الروابط */
    font-size:14px ;
    font-weight: bold;
+  max-width:100%;
     padding: 0;
 }
 
@@ -92,7 +93,7 @@ transform: scale(0.95);
     font-family: M;
     color: rgb(221, 157, 199);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
   white-space:nowrap;
 }
 
@@ -420,6 +421,7 @@ footer {
 .social-bar .csc ul {
   justify-content:center;
   overflow-x: auto;
+    max-width:80%;
 
 }
       .video-overlay h4{
@@ -485,6 +487,7 @@ footer {
 .social-bar .csc ul {
   justify-content:center;
   overflow-x: auto;
+    max-width:80%;
 
 }
       .video-overlay h4{
@@ -661,4 +664,5 @@ footer {
     }
 
 }
+
 
