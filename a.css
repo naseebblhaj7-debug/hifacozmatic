@@ -84,7 +84,7 @@ transform: scale(0.95);
     display: flex;
     justify-content: center;
     gap: 15px; /* مسافة بين الروابط */
-   font-size:14px ;
+  
    font-weight: bold;
  align-itmes: center;
     padding: 0;
@@ -419,7 +419,16 @@ footer {
             /* --- الهواتف الصغيرة: أقل من 600px --- */
                       /* --- الهواتف الصغيرة: أقل من 600px --- */
 @media (min-width:360px) and (max-width: 480px)  {
-
+.social-bar{
+  width:80%
+}
+  .social-bar .csc ul {
+    gap:7px;
+  }
+  .social-bar .csc ul a{
+    font-size:12px;
+  }
+  
       .video-overlay h4{
  padding: 5px 10px;
  font-size: 15px;
@@ -479,8 +488,19 @@ footer {
 }
 
 @media (min-width: 480px) and (max-width: 600px)  {
+  .social-bar{
+  width:80%
+}
+  .social-bar .csc ul {
+    gap:7px;
+  }
+  .social-bar .csc ul a{
+    font-size:12px;
+  }
   
-
+.social-bar{
+  width:80%
+}
       .video-overlay h4{
  padding: 10px 15px;
  font-size: 15px;
@@ -653,6 +673,7 @@ footer {
     }
 
 }
+
 
 
 
