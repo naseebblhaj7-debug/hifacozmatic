@@ -68,9 +68,8 @@ transform: scale(0.95);
 
 /* الروابط */
 .social-bar{
-   width:100%;
+   width:80%;
     display: flex;
-  padding:10px 0;
   justify-content: center;
   align-items: center;
   padding: 8PX 10PX;
@@ -670,6 +669,7 @@ footer {
     }
 
 }
+
 
 
 
