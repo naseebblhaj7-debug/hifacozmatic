@@ -1,683 +1,72 @@
-
-@font-face {
-  font-family: 'C'; /* اسم الخط الأول */
-  src: url('FONT/T.ttf') format('truetype');
-  font-weight: normal; /* هذا هو الوزن العادي */
-  font-style: normal;
-}
-
-/* 2. تعريف الخط الثاني: Tajawal للعناوين */
-@font-face {
-  font-family: 'T'; /* اسم الخط الثاني */
-  src: url('FONT/M.ttf') format('truetype');
-  font-weight: bold; /* هذا هو الوزن العريض */
-  font-style: normal;
-}
-body{
-    background-color: #ffffff;
-}
-header{
-    border-radius: 3%;
-    height:90px ;
-    width: 100%;
-    background:linear-gradient(180deg, #de8caee9,#e675a8);
-  position: relative;
-  text-align: center;
-}
-.logo h1{
-    font-family:'C';
-    text-align: center;
-    float: center;
-    color: #ffffff;
-    padding: 0px 10px;
-   font-size: 70px;
-   text-shadow: 3px 3px 3px rgb(172, 86, 136);
-}
-
-
-.scrch{
-    position: absolute;
-top:25%;
-right: 25px;
- z-index: 9;
-}
-.scrchinput{
-    padding:6px 9px ;
-    width: 150px;
-    color:rgb(136, 8, 70);
-    font-size: 16px;
-    border: 1px solid rgb(245, 51, 135);
-    border-radius: 10px;
-    text-align: center;
-   
-}
-
-
-.btnsrch{
-    border-radius: 5px;
-width: 30px;
-    border:3px solid palevioletred ;
-font-family: C;
-color: #e44d75;
-}
- .btnsrch:hover{
-transform: scale(0.95);
-
- }
-
-
-/* الروابط */
-.social-bar{
-   width:100%;
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8PX 10PX;
-  position: relative;
-  z-index: 99;
-}
-
-.social-bar .csc ul {
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* مسافة بين الروابط */
-
- align-itmes: center;
-    padding: 0;
-}
-
-.social-bar .csc ul li a {
-    font-family: M;
-    color: rgb(221, 157, 199);
-    text-decoration: none;
-    font-size:24px;
-   font-weight: bold;
-  white-space:nowrap;
-}
-
-.social-bar .csc ul li a:hover {
-  color:   #b30065;
-}
-/* عرض المنتجات:  grid */
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,180px);
-    gap:60px;
-    justify-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 90%;
-    padding: 20px 0;
-}
-
-/* الكارد */
-.product-card {
-    width:200px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    padding-bottom: 12px;
-    text-align: center;
-    overflow: hidden;
-    transition: 0.3s;
- 
-}
-
-/* صور المنتجات */
-.product-card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-}
-
-/* عنوان المنتج */
-.product-card h3 {
-    font-family:'C';
-    color: #b30065;
-    font-size: 18px;
-    margin: 10px 0 5px;
-}
-
-/* السعر */
-.price {
-    display: block;
-    margin: 8px 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* صندوق الكمية */
-.quantity-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    margin: 8px 0;
-}
-
-.quantity-box button {
-    width: 28px;
-    height: 28px;
-    background: #ef7aabe9;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.quantity-box .qty {
-    width: 36px;
-    height: 28px;
-    text-align: center;
-    border: 1px solid #aaa;
-    border-radius: 6px;
-}
-
-/* زر السلة */
-.cart-btn {
-    width: 80%;
-    background: #ef7aabe9;
-    color: white;
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.cart-btn i {
-    font-size: 20px;
-}
-
-.cart-btn:hover {
-    opacity: 0.8;
-}
-.minus:hover{
-     opacity: 0.8;
-}
-.plus:hover{
-     opacity: 0.8;
-}
-.product-card .media-box {
-    position: relative;
-    width: 100%;
-    height: 190px;
-    overflow: hidden;
-}
-.product-card:hover .media-box img {
-    position: absolute;
-    width: 35%;
-    height: auto;
-    bottom: 2px;
-    right: 2px;
-    top: auto;
-    left: auto;
-    border-radius: 8px;
-    z-index: 3;
-    transition: 0.4s ease;cursor: pointer;
-}
-.product-card .hover-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: 0.4s;
-    z-index: 1;
-}
-
-.product-card:hover .hover-video {
-    opacity: 1;
-}
-
-footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    background-color: #fdeaf1; /* لون خلفية الفوتر */
-    padding: 50px 5%; /* 5% هامش من اليمين واليسار */
-    flex-wrap: wrap; /* يسمح للأقسام بالنزول لأسفل في الشاشات الصغيرة */
-    gap: 30px; /* مسافة بين الأقسام */
-    text-align: center; /* توسيط النصوص بشكل عام */
-}
-
-/* تنسيق كل قسم داخل الفوتر */
-.footer-section {
-    flex: 1; /* يجعل الأقسام تأخذ مساحة متساوية */
-    min-width: 300px; /* أقل عرض ممكن للقسم */
-    background-color: #ffffff;
-    border-radius: 10px;
-    border:2px solid #b30065;
-}
-
-.footer h2, .footer h3 {
-    font-family:'C'; /* استخدم خط العناوين الخاص بك */
-    color: #d9538d; /* لون العناوين الرئيسية */
-    margin-bottom: 20px;
-
-}
-
-.footer p {
-    color: #555;
-    line-height: 1.7; /* ارتفاع السطر لسهولة القراءة */
-    font-size: 15px;
-}
-
-/* --- قسم التواصل --- */
-.locations h4 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.locations p {
-    margin-bottom: 5px;
-}
-.locations p  a {
-   text-decoration: none;
-   color: #b30065;
-}
-.locations p a :hover {
-  color: #b34e6b; /* تغيير اللون عند مرور الماوس */
-    transform: scale(2);
-}
-
-/* --- قسم أيقونات التواصل الاجتماعي --- */
-.social-media {
-    margin-top: 20px;
-}
-
-.social-media a {
-    color: #e86fa4; /* لون أيقونات التواصل */
-    font-size: 22px; /* حجم الأيقونات */
-    margin: 0 12px; /* مسافة بين الأيقونات */
-    transition: transform 0.3s ease, color 0.3s ease;
-    display: inline-block; /* ضروري لتطبيق transform */
-}
-
-.social-media a:hover {
-    color: #b34e6b; /* تغيير اللون عند مرور الماوس */
-    transform: scale(1.2); /* تكبير الأيقونة قليلاً */
-}
-
-/* --- قسم الحقوق في الأسفل --- */
-.footer-bottom {
-    background-color: #fdeaf1; /* نفس لون خلفية الفوتر */
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #e7c8d6; /* خط فاصل علوي */
-    width: 100%;
-}
-
-.footer-bottom p {
-    margin: 0;
-    color: #888;
-    font-size: 14px;
-}
-
-
-
-/* Video Slideshow - CSS Only */
-        .video-slideshow-css-only {
-            position: relative;
-           height: 15px;
-            max-width:1300px; /* يمكنك تعديل العرض */
-            margin: 20px auto;
-            background-color: #000;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-       height:0px;
-       padding-bottom: 56.25%;
-       border: 5px solid rgb(236, 123, 193);
-        }
-        .video-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0; /* إخفاء جميع الشرائح افتراضياً */
-            transition: opacity 1s ease-in-out;
-        }
-
-        .video-slide video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Animation for 2 slides */
-        @keyframes videoFade {
-            0% { opacity: 1; } /* الفيديو الأول يظهر */
-            45% { opacity: 1; }
-            50% { opacity: 0; } /* الفيديو الأول يختفي */
-            95% { opacity: 0; }
-            100% { opacity: 1; } /* الفيديو الأول يظهر مرة أخرى (للتكرار) */
-        }
-
-        /* Apply animation to the first video */
-        .video-slideshow-css-only .video-slide:nth-child(1) {
-            animation: videoFade 10s infinite; /* 10 ثواني للدورة الكاملة (5 ثواني لكل فيديو) */
-        }
-
-        /* Apply inverse animation to the second video */
-        .video-slideshow-css-only .video-slide:nth-child(2) {
-            animation: videoFade 10s infinite reverse; /* عكس الحركة */
-        }
-       
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 5; 
-            
-        }
-
-        .video-overlay h4{
-            color: white; 
-            background-color: #e675a880;
-            font-size: 30px; 
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-            padding: 10px 20px;
-            border-radius: 10px;
-            opacity: 0;
-            /* تطبيق حركة ظهور النص */
-            animation: showHide 3.5s ease-out forwards;
-     
-        }
-         @keyframes showHide {
-    0%{
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    20%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-    80%{
-        opacity: 1;
-        transform: translateY(0); /* تقعد شوية */
-    }
-    100%{
-        opacity: 0;
-        transform: translateY(-20px); /* تتنحّى */
-    }
-}
-            /* --- الهواتف الصغيرة: أقل من 600px --- */
-                      /* --- الهواتف الصغيرة: أقل من 600px --- */
-@media (min-width:360px) and (max-width: 480px)  {
-
-  .social-bar .csc ul {
-    gap:15px;
- 
-  }
-  .social-bar .csc ul li a{
-     font-weight: bold;
-    font-size:12px;
-  }
-  
-      .video-overlay h4{
- padding: 5px 10px;
- font-size: 15px;
-       }
-
-    header .logo h1 {
-        font-size: 40px;
-        text-shadow: 2px 2px 2px rgb(172, 86, 136);
-    }
-    
-
-   
-    .scrch {
-      
-        top:60%;
-      
-        width: 80%;
-      
-  
-    }
-    .scrchinput {
-        width:60%;
-        font-size: 14px;
-        padding: 5px 8px;
-    }
-
-    .video-slideshow-css-only {
-        max-width: 100%;
-        padding-bottom: 56.25%;
-        border-width: 3px;
-    }
-
-    .products {
-        grid-template-columns: repeat(auto-fit, 150px);
-        gap: 20px;
-    }
-
-    .product-card {
-        width: 150px;
-    }
-    .product-card img {
-        height: 200px;
-    }
-
-    .footer {
-        flex-direction: column;
-        padding: 20px 10px;
-        gap: 15px;
-    }
-    .footer-section {
-        min-width: 100%;
-        margin-bottom: 10px;
-    }
- 
-}
-
-@media (min-width: 480px) and (max-width: 600px)  {
-
-  .social-bar .csc ul {
-    gap:15px;
- 
-  }
-  .social-bar .csc ul li a{
-    font-size:14px;
-     font-weight: bold;
-  }
-
-      .video-overlay h4{
- padding: 10px 15px;
- font-size: 15px;
-       }
-
-    header .logo h1 {
-        font-size: 40px;
-        text-shadow: 2px 2px 2px rgb(172, 86, 136);
-    }
-    
-
-    .scrch {
-      
-        top:60%;
-      
-        width: 80%;
-      
-  
-    }
-    .scrchinput {
-        width:60%;
-        font-size: 14px;
-        padding: 5px 8px;
-    }
-
-    .video-slideshow-css-only {
-        max-width: 100%;
-        padding-bottom: 56.25%;
-        border-width: 3px;
-    }
-
-    .products {
-        grid-template-columns: repeat(auto-fit, 150px);
-        gap: 20px;
-    }
-
-    .product-card {
-        width: 150px;
-    }
-    .product-card img {
-        height: 200px;
-    }
-
-    .footer {
-        flex-direction: column;
-        padding: 20px 10px;
-        gap: 15px;
-    }
-    .footer-section {
-        min-width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-/* --- الهواتف الكبيرة والتابلت الصغير: 600px – 900px --- */
-@media (min-width: 601px) and (max-width: 900px) {
-   
- 
-    header .logo h1 {
-        font-size: 55px;
-    }
-    .scrch {
-        top: 20%;
-        right: 15px;
-    }
-    .scrchinput {
-        width: 120px;
-        font-size: 15px;
-    }
-
-    .video-slideshow-css-only {
-        max-width: 90%;
-        padding-bottom: 56.25%;
-    }
-
-    .products {
-        grid-template-columns: repeat(auto-fit,130px);
-        gap:40px;
-    }
-
-    .product-card {
-        width: 160px;
-    }
-    .product-card img {
-        height: 200px;
-    }
-
-    .footer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .footer-section {
-        min-width: 45%;
-        margin-bottom: 15px;
-    }
-}
-
 /* --- التابلت الكبير والشاشات المتوسطة: 901px – 1200px --- */
 @media (min-width: 901px) and (max-width: 1200px) {
     header .logo h1 {
-        font-size: 65px;
+        font-size: 4.0625rem; /* 65px / 16 */
     }
     .scrch {
         top: 22%;
-        right: 20px;
+        right: 1.25rem; /* 20px / 16 */
     }
     .scrchinput {
-        width: 140px;
-        font-size: 16px;
+        width: 8.75rem; /* 140px / 16 */
+        font-size: 1rem; /* 16px / 16 */
     }
 
     .video-slideshow-css-only {
-        max-width: 1000px;
+        max-width: 62.5rem; /* 1000px / 16 */
         padding-bottom: 56.25%;
     }
 
     .products {
-        grid-template-columns: repeat(auto-fit, 180px);
-        gap: 40px;
+        grid-template-columns: repeat(auto-fit, 11.25rem); /* 180px / 16 */
+        gap: 2.5rem; /* 40px / 16 */
     }
 
     .product-card {
-        width: 180px;
+        width: 11.25rem; /* 180px / 16 */
     }
     .product-card img {
-        height:200px;
+        height: 12.5rem; /* 200px / 16 */
     }
 
     .footer-section {
         min-width: 30%;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem; /* 20px / 16 */
     }
 }
 
 /* --- الشاشات الكبيرة: أكثر من 1200px --- */
 @media (min-width: 1201px) {
     header .logo h1 {
-        font-size: 70px;
+        font-size: 4.375rem; /* 70px / 16 */
     }
     .scrch {
         top: 25%;
-        right: 25px;
+        right: 1.5625rem; /* 25px / 16 */
     }
     .scrchinput {
-        width: 150px;
-        font-size: 16px;
+        width: 9.375rem; /* 150px / 16 */
+        font-size: 1rem; /* 16px / 16 */
     }
 
     .video-slideshow-css-only {
-        max-width: 1300px;
+        max-width: 81.25rem; /* 1300px / 16 */
         padding-bottom: 56.25%;
     }
 
     .products {
-        grid-template-columns: repeat(auto-fit, 200px);
-        gap: 60px;
+        grid-template-columns: repeat(auto-fit, 12.5rem); /* 200px / 16 */
+        gap: 3.75rem; /* 60px / 16 */
     }
 
     .product-card {
-        width: 200px;
+        width: 12.5rem; /* 200px / 16 */
     }
     .product-card img {
-        height:200px;
+        height: 12.5rem; /* 200px / 16 */
     }
 
     .footer-section {
-        min-width: 300px;
-        margin-bottom: 30px;
+        min-width: 18.75rem; /* 300px / 16 */
+        margin-bottom: 1.875rem; /* 30px / 16 */
     }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
